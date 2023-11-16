@@ -266,6 +266,8 @@ class App {
       `;
 
     form.insertAdjacentHTML('afterend', html);
+
+    resetWorkouts.classList.remove('hidden');
   }
   _moveToPopup(e) {
     const workoutEl = e.target.closest('.workout');
