@@ -3,7 +3,7 @@
 class Workout {
   date = new Date();
   id = (Date.now() + '').slice(-10);
-  clicks = 0;
+  // clicks = 0;
 
   constructor(coords, distance, duration) {
     // this.date = ...
@@ -70,6 +70,7 @@ const inputDistance = document.querySelector('.form__input--distance');
 const inputDuration = document.querySelector('.form__input--duration');
 const inputCadence = document.querySelector('.form__input--cadence');
 const inputElevation = document.querySelector('.form__input--elevation');
+const resetWorkouts = document.querySelector('.reset__workouts');
 
 class App {
   #map;
@@ -304,5 +305,6 @@ class App {
     location.reload();
   }
 }
+resetWorkouts.addEventListener('click', () => app.reset());
 
 const app = new App();
