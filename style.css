@@ -52,23 +52,20 @@ a:visited {
 .logo {
   height: 5.2rem;
   align-self: center;
-  margin-bottom: 4rem;
+  margin-bottom: 3.5rem;
 }
+
 .reset__workouts.hidden {
   display: none;
 }
 .reset__workouts {
-  width: 8%;
-  height: 4.5%;
-  top: 11.6%;
-  left: 3.7%;
+  width: 140px;
+  min-height: 50px;
   cursor: pointer;
+  margin-bottom: 4px;
   border-radius: 50px;
-  margin: 0 auto;
-  margin-bottom: 10px;
   font-size: 15px;
   font-weight: 600;
-  position: absolute;
   transition: all 0.2s ease-in-out;
 }
 .reset__workouts:hover {
@@ -243,4 +240,43 @@ a:visited {
 }
 .cycling-popup .leaflet-popup-content-wrapper {
   border-left: 5px solid var(--color-brand--1);
+}
+
+@media (max-width: 1480px) {
+  .sidebar {
+    flex-basis: 44rem;
+  }
+}
+@media (max-width: 960px) {
+  body {
+    flex-direction: column;
+    height: 200vh;
+  }
+}
+@media (max-width: 508px) {
+  .workout {
+    grid-template-columns: 1fr 1fr;
+  }
+  .reset__workouts {
+    margin: 4px auto;
+  }
+  .workouts {
+    height: 45vh;
+  }
+}
+@media (max-width: 420px) {
+  .workout {
+    gap: 1.75rem 0.5rem;
+    padding: 1.5rem 0.5rem 1.5rem 0.8rem;
+  }
+  .workout__unit {
+    font-size: 0.9rem;
+  }
+  .leaflet-popup .leaflet-popup-content {
+    font-size: 0.9rem;
+    width: 135px;
+  }
+  .copyright {
+    font-size: 1rem;
+  }
 }
