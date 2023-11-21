@@ -264,9 +264,6 @@ a:visited {
   }
 }
 @media (max-width: 508px) {
-  .workout {
-    grid-template-columns: 1fr 1fr;
-  }
   .reset__workouts {
     margin: 8px auto;
   }
@@ -274,14 +271,27 @@ a:visited {
     height: 45vh;
   }
 }
+@media (max-width: 527px) {
+  .workout {
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+  }
+}
+@media (max-width: 375px) {
+  .workout {
+    justify-items: normal;
+  }
+  .sidebar {
+    padding: 3rem 4rem 4rem 4rem;
+  }
+}
 @media (max-width: 370px) {
   .copyright {
     font-size: 1rem;
   }
 }
-@media (max-width: 358px) {
+@media (max-width: 359px) {
   .workout {
-    gap: 1.75rem 0.5rem;
     padding: 1.5rem 0.5rem 1.5rem 0.8rem;
   }
   .workout__unit {
